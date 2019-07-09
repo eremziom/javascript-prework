@@ -1,5 +1,33 @@
+/*Variables*/
+$color-button: #bdff80;
+$font-text-1: 'Dosis', sans-serif;
+$font-text-2: 'Amatic SC', cursive;
 
+/*Global*/
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
 .container {
     max-width: 1140px;
-    background-color: red;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.btn {
+    background-color: $color-button;
+    display: inline-block;
+    min-width: 200px;
+    min-height: 100px;
+    font-size: 40px;
+    cursor: pointer;
+    border-radius: 10px;
+    border: none;
+    font-family: $font-text-2;
+    font-weight: bold;
+
+}
+
+.title, .instruction, .msg, .tbl {
+    font-family: $font-text-1;
 }

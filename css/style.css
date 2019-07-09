@@ -1,5 +1,29 @@
+/*Variables*/
+/*Global*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 .container {
   max-width: 1140px;
-  background-color: blue;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.btn {
+  background-color: #bdff80;
+  display: inline-block;
+  min-width: 200px;
+  min-height: 100px;
+  font-size: 40px;
+  cursor: pointer;
+  border-radius: 10px;
+  border: none;
+  font-family: "Amatic SC", cursive;
+  font-weight: bold;
+}
+
+.title, .instruction, .msg, .tbl {
+  font-family: "Dosis", sans-serif;
 }
 /*# sourceMappingURL=style.css.map */

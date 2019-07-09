@@ -44,7 +44,6 @@ function playGame(playerInput){
     }
         
     let randomNumber = Math.floor(Math.random() * 3 + 1);
-    /*let playerInput = prompt('Twój ruch to... 1: kamień, 2: papier, 3: nożyce');*/
     let computerMove = getMoveName(randomNumber);
     let playerMove = getMoveName(playerInput);
     let gameResult = getResult(computerMove, playerMove);
@@ -53,8 +52,14 @@ function playGame(playerInput){
     console.log('Gracz wybrał: ' + playerInput);
 }
 
+function gameResult(){
+    printMessage1('0:0');
+}
+
 document.getElementById('rock-button').addEventListener('click', function(){playGame(1)});
 
-  document.getElementById('paper-button').addEventListener('click', function(){playGame(2)});
+document.getElementById('paper-button').addEventListener('click', function(){playGame(2)});
 
-  document.getElementById('scissors-button').addEventListener('click', function(){playGame(3)});
+document.getElementById('scissors-button').addEventListener('click', function(){playGame(3)});
+
+gameResult();
