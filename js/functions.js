@@ -13,3 +13,7 @@ function printMessage1(msg){
 function clearMessages(){
 	document.getElementById('messages').innerHTML = '';
 }
+
+function clearMessages1(){
+	document.getElementById('score').innerHTML = '';
+}

@@ -26,4 +26,10 @@
 .title, .instruction, .msg, .tbl {
   font-family: "Dosis", sans-serif;
 }
+
+.tbl {
+  font-size: 30px;
+  font-weight: bold;
+  color: red;
+}
 /*# sourceMappingURL=style.css.map */

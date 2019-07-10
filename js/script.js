@@ -1,3 +1,6 @@
+let computerScore = 0;
+let playerScore = 0;
+
 function playGame(playerInput){
     clearMessages();
 
@@ -27,33 +30,47 @@ function playGame(playerInput){
             printMessage('REMIS!');
         } else if(argPlayerMove == 'kamień' && argComputerMove == 'papier'){
             printMessage('PRZEGRAŁEŚ');
+            computerScore ++;
         } else if(argPlayerMove == 'papier' && argComputerMove == 'nożyce'){
             printMessage('PRZEGRAŁEŚ');
+            computerScore ++;
         } else if(argPlayerMove == 'nożyce' && argComputerMove == 'kamień'){
             printMessage('PRZEGRAŁEŚ');
+            computerScore ++;
         } else if(argPlayerMove == 'kamień' && argComputerMove == 'nożyce'){
             printMessage('WYGRAŁEŚ');
+            playerScore ++;
         } else if(argPlayerMove == 'papier' && argComputerMove == 'kamień'){
             printMessage('WYGRAŁEŚ');
+            playerScore ++;
         } else if(argPlayerMove == 'nożyce' && argComputerMove == 'papier'){
             printMessage('WYGRAŁEŚ');
+            playerScore ++;
         } else{
             printMessage('NIE UMIESZ WYBRAĆ POPRAWNIE LICZBY GAMONIU?');
         }
         console.log('moves:', argComputerMove, argPlayerMove);
+
+        function result(){
+            clearMessages1();
+        printMessage1(playerScore + ' : ' + computerScore);
+            if(playerScore == '5'){
+                printMessage1('Brawo, wygrałeś partię!')
+            } else if(computerScore == '5'){
+                printMessage1('Niestety, przegrałeś partię!')
+            }
+        }
+
+        result();
     }
-        
+   
     let randomNumber = Math.floor(Math.random() * 3 + 1);
     let computerMove = getMoveName(randomNumber);
     let playerMove = getMoveName(playerInput);
-    let gameResult = getResult(computerMove, playerMove);
+    let gameResults = getResult(computerMove, playerMove);
 
     console.log('Wylosowana liczba to: ' + randomNumber);
     console.log('Gracz wybrał: ' + playerInput);
-}
-
-function gameResult(){
-    printMessage1('0:0');
 }
 
 document.getElementById('rock-button').addEventListener('click', function(){playGame(1)});
@@ -61,5 +78,3 @@ document.getElementById('rock-button').addEventListener('click', function(){play
 document.getElementById('paper-button').addEventListener('click', function(){playGame(2)});
 
 document.getElementById('scissors-button').addEventListener('click', function(){playGame(3)});
-
-gameResult();

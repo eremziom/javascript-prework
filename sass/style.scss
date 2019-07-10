@@ -31,3 +31,9 @@ $font-text-2: 'Amatic SC', cursive;
 .title, .instruction, .msg, .tbl {
     font-family: $font-text-1;
 }
+
+.tbl {
+    font-size: 30px;
+    font-weight: bold;
+    color: red;
+}
