@@ -2,7 +2,7 @@ let computerScore = 0;
 let playerScore = 0;
 
 function playGame(playerInput){
-    clearMessages();
+    clearMessages('messages');
 
     function getMoveName(argMoveId){
         if(argMoveId == 1){
@@ -19,32 +19,32 @@ function playGame(playerInput){
 
     function getResult(argComputerMove, argPlayerMove){
 
-        printMessage('Twój ruch to: ' + playerMove);
-        printMessage('Mój ruch to: ' + computerMove);
+        printMessage('Twój ruch to: ' + playerMove, 'messages');
+        printMessage('Mój ruch to: ' + computerMove, 'messages');
 
         if(argPlayerMove == 'kamień' && argComputerMove == 'kamień'){
-            printMessage('REMIS!');
+            printMessage('REMIS!', 'messages');
         } else if(argPlayerMove == 'papier' && argComputerMove == 'papier'){
-            printMessage('REMIS!');
+            printMessage('REMIS!', 'messages');
         } else if(argPlayerMove == 'nożyce' && argComputerMove == 'nożyce'){
-            printMessage('REMIS!');
+            printMessage('REMIS!', 'messages');
         } else if(argPlayerMove == 'kamień' && argComputerMove == 'papier'){
-            printMessage('PRZEGRAŁEŚ');
+            printMessage('PRZEGRAŁEŚ', 'messages');
             computerScore ++;
         } else if(argPlayerMove == 'papier' && argComputerMove == 'nożyce'){
-            printMessage('PRZEGRAŁEŚ');
+            printMessage('PRZEGRAŁEŚ', 'messages');
             computerScore ++;
         } else if(argPlayerMove == 'nożyce' && argComputerMove == 'kamień'){
-            printMessage('PRZEGRAŁEŚ');
+            printMessage('PRZEGRAŁEŚ', 'messages');
             computerScore ++;
         } else if(argPlayerMove == 'kamień' && argComputerMove == 'nożyce'){
-            printMessage('WYGRAŁEŚ');
+            printMessage('WYGRAŁEŚ', 'messages');
             playerScore ++;
         } else if(argPlayerMove == 'papier' && argComputerMove == 'kamień'){
-            printMessage('WYGRAŁEŚ');
+            printMessage('WYGRAŁEŚ', 'messages');
             playerScore ++;
         } else if(argPlayerMove == 'nożyce' && argComputerMove == 'papier'){
-            printMessage('WYGRAŁEŚ');
+            printMessage('WYGRAŁEŚ', 'messages');
             playerScore ++;
         } else{
             printMessage('NIE UMIESZ WYBRAĆ POPRAWNIE LICZBY GAMONIU?');
@@ -52,12 +52,12 @@ function playGame(playerInput){
         console.log('moves:', argComputerMove, argPlayerMove);
 
         function result(){
-            clearMessages1();
-        printMessage1(playerScore + ' : ' + computerScore);
+            clearMessages('score');
+        printMessage(playerScore + ' : ' + computerScore, 'score');
             if(playerScore == '5'){
-                printMessage1('Brawo, wygrałeś partię!')
+                printMessage('Brawo, wygrałeś partię!', 'score')
             } else if(computerScore == '5'){
-                printMessage1('Niestety, przegrałeś partię!')
+                printMessage('Niestety, przegrałeś partię!', 'score')
             }
         }
 
