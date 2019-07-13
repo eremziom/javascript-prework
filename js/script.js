@@ -64,10 +64,10 @@ function playGame(playerInput){
         result();
     }
    
-    let randomNumber = Math.floor(Math.random() * 3 + 1);
-    let computerMove = getMoveName(randomNumber);
-    let playerMove = getMoveName(playerInput);
-    let gameResults = getResult(computerMove, playerMove);
+    const randomNumber = Math.floor(Math.random() * 3 + 1);
+    const computerMove = getMoveName(randomNumber);
+    const playerMove = getMoveName(playerInput);
+    const gameResults = getResult(computerMove, playerMove);
 
     console.log('Wylosowana liczba to: ' + randomNumber);
     console.log('Gracz wybrał: ' + playerInput);

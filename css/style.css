@@ -5,9 +5,15 @@
 }
 
 .container {
-  max-width: 1140px;
+  max-width: 700px;
   margin: 0 auto;
   text-align: center;
+  border-style: solid;
+  border-color: red;
+  border-width: 5px;
+  border-radius: 10px;
+  min-height: 450px;
+  background-color: #ffffb3;
 }
 
 .btn {
